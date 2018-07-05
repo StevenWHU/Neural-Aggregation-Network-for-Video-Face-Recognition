@@ -66,6 +66,7 @@ class Data(object):
 
 if __name__ == "__main__":
     filename = "./YoutubeFaces.mat"
+    dataset = Data(filename, 3, 1595) # filename, batch_size, class_num
     dataset.load_feature()
     train_features, train_label = dataset.next_batch(5)
     print train_features, train_label
